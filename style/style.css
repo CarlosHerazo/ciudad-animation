@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-principal {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    animation: cielo 80s infinite;
+}
+
+@keyframes cielo{
+    0% {
+        background-color: #87CEEB; /* Color de cielo durante el día */
+      }
+      50% {
+        background-color: #1e1d1d; /* Color negro para la noche más profunda */
+      }
+      100%{
+        background-color: #87CEEB; /* Color de cielo durante el día */
+      }
+}
+
+
+.container__edificios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edificios {
+    margin-top: 10rem;
+    margin-left: 5rem;
+    height: 400px;
+    width: 300px;
+    margin-right: 70px;
+    background-color: #27180a;
+}
+
+.contenedor__ventanas {
+    display: flex;
+    justify-content: space-around;
+    align-items: last baseline;
+    margin-top: 50px;
+}
+
+.contenedor__puerta {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.puerta {
+    width: 70px;
+    height: 105px;
+    background-color: #3a3030;
+}
+
+.ventanas {
+    width: 70px;
+    height: 70px;
+    margin: 30px;
+    background-color: #34474c;
+}
+
+.luz{
+    animation: encender  80s infinite; 
+}
+
+@keyframes encender{   
+      50%{
+        background-color: #ffca0a; /* Color negro para la noche más profunda */
+      } 
+     
+}
+.sol {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 90%;
+    bottom: 80%;
+    border-radius: 50%;
+    background-color: #f9ab02;
+    opacity: 1;
+    box-shadow: 0px 0px 100px #f4a802;
+    animation: desaparecer 80s infinite; /* Aplica la animación */
+}
+@keyframes desaparecer {
+    0% {
+        opacity: 1; /* Comienza con opacidad en 0 */
+        transform: translate(0, 0);
+    }
+      50% {
+        opacity: 0; /* Regresa a opacidad 0 al final de la animación */
+        transform: translate(200px, 200px);  
+    }
+      100%{
+        opacity: 1; /* Regresa a opacidad 0 al final de la animación */
+        transform: translate(0, 0);
+    }
+}
+
+
+.luna {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #c7d5e1;
+    box-shadow: 0px 0px 100px #ffffff;
+    bottom: 80%;
+    right: 90%;
+    opacity: 0; /* Comienza con opacidad en 0 para que esté oculto */
+    animation: aparecer 80s infinite alternate; /* Aplica la animación */
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0; /* Comienza con opacidad en 0 */
+        transform: translate(-200px, 200px);  
+    }
+      50% {
+        opacity: 1; /* Llega a opacidad máxima (visible) a la mitad de la animación */
+      transform: translate(0, 0);
+    }
+      100% {
+        opacity: 0; /* Regresa a opacidad 0 al final de la animación */
+        transform: translate(-200px, 200px);  
+
+    }
+}
+
+.nube {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50px;
+    opacity: 0.8;
+    transform: scale(1.2);
+    filter: blur(8px);
+    animation: movimiento 80s infinite;
+}
+.nube:nth-child(2){
+    margin-top: 100px;
+    animation: movimiento2 80s infinite;
+}
+@keyframes movimiento{
+    from{
+        margin-left: -3%;
+    }
+
+    to{
+        margin-left: 100%;
+    }
+}
+@keyframes movimiento2{
+    from{
+        margin-left: 100%;
+    }
+
+    to{
+        margin-right: -30%;
+    }
+}
+
+
+
+.carretera {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #21201f;
+}
+
+.rayas__carretera {
+    width: 100px;
+    border: #ffffff 1px solid;
+    margin: 2rem;
+}
+
+.contenedenor__arbol {
+    position: relative;
+    margin: 0;
+    height: 560px;
+    width: 300px;
+}
+
+.tallo {
+    position: absolute;
+    top: 74%;
+    left: 40%;
+    height: 150px;
+    width: 30px;
+    padding: 0;
+    background-color: #491a03;
+}
+
+.hojas {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: green;
+    border: #000 1px solid;
+}
+
+
+
+
+/* carro 1*/
+.contenedor__carro{
+    position: absolute;
+    top: 50%;
+    animation: arrancar 20s infinite;
+}
+@keyframes arrancar {
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(-1100px);
+    }
+}
+.carro {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: #4a90e2;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.techo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 280px;
+    height: 70px;
+    background-color: #2c3e50;
+    border-radius: 10px 10px 0 0;
+}
+
+.cuerpo {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 300px;
+    height: 80px;
+    background-color: #34495e;
+    border-radius: 0 0 10px 10px;
+}
+
+.ventana {
+    position: absolute;
+    border-radius: 0px 10px 0px 0px;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #ecf0f1;
+}
+
+.rueda {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: #000 solid 1px;
+    background-color: #2c3e50;
+    position: absolute;
+    bottom: -12px;
+}
+
+.rueda.delantera {
+    left: 40px;
+}
+
+.rueda.trasera {
+    right: 40px;
+}
+
+
+/*Carro 2*/
+
+.contenedor__carro2 {
+    position: absolute;
+    top: 70%;
+    animation: arrancar2 20s infinite;
+  }
+  @keyframes arrancar2{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(1100px);
+    }
+  }
+  .carro2 {
+    position: relative;
+    width: 170px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.techo2 {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 150px;
+    height: 70px;
+    background-color: #aa5f0a;
+    border-radius: 00px 20px 0px 0px ;
+}
+
+.cuerpo2 {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 300px;
+    height: 80px;
+    background-color: #391c03;
+    border-radius: 0 0 10px 10px;
+}
+
+.ventana2 {
+    position: absolute;
+    top: 0px;
+    left: 86%;
+    width: 40px;
+    height: 40px;
+    background-color: #ffee04;
+    box-shadow: 0px 0px 10px #ffee04;
+}
+.ventanaConductor{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    left: 70%;
+    background-color: #05668d;
+    border-radius: 0px 20px 0px 0px ;
+}
+
+.rueda2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: #000 solid 1px;
+    background-color: #2c3e50;
+    position: absolute;
+    bottom: -12px;
+}
+
+.rueda.delantera2 {
+    left: 40px;
+}
+
+.rueda.trasera2 {
+    right: 40px;
+}
